@@ -1,0 +1,164 @@
+
+/* 
+	A little introduction: 
+
+	In CSS, the '.' (dot) is used to select classes. For example, `.class-name` will select all elements with the class "class-name".
+	To select an element with a specific ID, you would use the '#' (hash) symbol. For example, `#element-id` will select the element with the ID "element-id".
+*/
+
+
+* {
+	margin: 0; /* This resets the default margin for all elements */
+	padding: 0; /* This resets the default padding for all elements */
+	box-sizing: border-box; /* This ensures padding and borders are included in the element's total width and height */
+}
+
+html, body {
+    height: 100%; /* This ensures the html and body take up the full height of the viewport */
+}
+
+body {
+    min-height: 100vh; /* This ensures the body takes up at least the full height of the viewport */
+    display: flex; /* This makes the body a flex container */
+    flex-direction: column; /* This arranges the child elements in a column */
+}
+
+.main-content {
+	flex: 1; 
+}
+
+/* Header */
+header {
+	background-color: rgb(16, 25, 25); /* This sets the background color of the header */
+	color: white; /* This sets the text color of the header */
+	padding: 5px; /* This adds padding to the header. The padding is 10px on all sides (top, right, bottom, left) */
+	position: fixed; /* This makes the header fixed at the top */
+	top: 0; /* This positions the header at the top */
+	width: 100%; /* This makes the header take the full width */
+	z-index: 1000; /* This sets the z-index of the header. Meaning it will be above other elements. The higher the value, the more above it will be */
+}
+
+.header-container {
+	display: flex; /* This makes the header container a flex container */
+	align-items:end ; /* This vertically centers the items in the header */
+	justify-content: space-between; /* This spaces the items out evenly */
+
+}
+
+.nav-links {
+	list-style: none; /* This removes the default list styling. Meaning there will be no bullets or numbers */
+    text-decoration: none; /* This removes the text decoration. Meaning there will be no underline or other decoration */
+}
+
+.nav-links li{
+	display: inline; /* This displays the list items inline. Meaning they will be arranged in a row */
+	text-decoration: none; /* This removes the text decoration. Meaning there will be no underline or other decoration */
+	margin-left: 7px; /* This adds a left margin to the list items */
+	font-size: 15px; /* This sets the font size of the list items */
+}
+
+.nav-links li a {
+	color: white; /* This sets the text color of the links */
+    text-decoration: none; /* This removes the text decoration. Meaning there will be no underline or other decoration */
+}
+
+.nav-links li:first-child {
+	margin-left:0px; /* This removes the left margin from the first list item */
+}
+
+.nav-links li a:hover {
+	color: rgb(255, 0, 217); /* This sets the text color of the links on hover */
+	text-decoration: underline; /* This adds an underline to the links on hover */
+	cursor: pointer; /* This changes the cursor to a pointer on hover */
+}
+
+
+/* Welcome section */
+.welcome-section {
+	background-color: rgb(255, 254, 254); /* This sets the background color of the hero section */
+	padding-left: 5px; /* This adds padding to the left */
+	padding-right: 5px; /* This adds padding to the right */
+	padding-top: 10px; /* This adds padding to the top */
+	padding-bottom: 10px; /* This adds padding to the bottom */
+	text-align: left; /* This centers the text */
+	align-content: left; /* This centers the content vertically */
+	margin-top: 100px; /* This adds a top margin */
+	height: 25px; /* This sets the height of the hero section */
+}
+
+
+/* About us */
+.about-us {
+	padding: 20px 0px; /* This adds padding to the about us section. The padding is 20px on the top and bottom, and 10px on the left and right */
+	padding-top: 100px; /* Add enough top padding for header height */
+}
+
+.about-us h2 {
+	margin-bottom: 6px; /* This adds a bottom margin to the h2 elements */
+}
+
+
+/* About us */
+.our-services {
+    padding: 20px 0px; /* This adds padding to the about us section. The padding is 20px on the top and bottom, and 10px on the left and right */
+	padding-top: 10px; /* Add enough top padding for header height */
+    
+
+}
+
+/* Contact us */
+.contact-us {
+	background-color:rgb(255, 255, 255); /* This sets the background color of the contact us section */
+	padding: 10px 0px; /* This adds padding to the contact us section */
+	margin-left: 0px; /* This adds a left margin to the contact us section */
+	margin-right: 10px; /* This adds a right margin to the contact us section */
+	margin-bottom: 20px; /* This adds a bottom margin to the contact us section */
+    border-color: blue;
+}
+
+
+.float-left {
+    float: left; /* This floats the element to the left. This is useful for creating multi-column layouts */
+}
+
+.float-center {
+}
+
+
+/* Footer */
+footer {
+    background-color: rgb(255, 255, 255); /* This sets the background color of the footer */
+    padding: 15px 0; /* This adds padding to the footer. The padding is 15px on the top and bottom, and 0 on the left and right */
+    text-align: center; /* This centers the text in the footer */
+    color: rgb(0, 0, 0); /* This sets the text color of the footer */
+    position: relative; /* This positions the footer relative to its normal position */
+    margin-bottom: 0; /* This sets the bottom margin of the footer */
+    bottom: 0; /* This positions the footer at the bottom of the page */
+    width: 100%; /* This sets the width of the footer */
+}
+
+.footer-container {
+	display: flex; /* This makes the footer container a flex container */
+	align-items: center; /* This vertically centers the items in the footer */
+	justify-content: space-between; /* This spaces the items out evenly */
+
+}
+
+.how-to-reach {
+    list-style: none; /* This removes the default list styling. Meaning there will be no bullets or numbers */
+	padding: 30px 10px; /* This adds padding to the about us section. The padding is 20px on the top and bottom, and 10px on the left and right */
+}
+
+/* This media query targets screens smaller than 600px */
+@media (max-width: 600px) {
+    .about-us {
+        padding: 16px 4px; /* This adds padding to the about us section. The padding is 16px on the top and bottom, and 4px on the left and right */
+        padding-top: 90px; /* Slightly less top padding for smaller screens */
+    }
+    .about-us h2 {
+        font-size: 1.3em; /* This sets the font size of the h2 element */
+    }
+    .about-us div p {
+        font-size: 0.98em; /* This sets the font size of the paragraph within the about-us div */
+    }
+}
